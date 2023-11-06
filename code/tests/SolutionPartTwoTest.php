@@ -1,7 +1,7 @@
 <?php
 
 use CodeChallenge\SomeExampleSolution;
-use CodeChallenge\Tests\lib\SolutionHelper;
+use CodeChallenge\Tests\SolutionHelper;
 
 final class SolutionPartTwoTest extends SolutionHelper {
     public function testPartOneExample(): void {

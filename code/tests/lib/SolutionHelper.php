@@ -1,6 +1,6 @@
 <?php
 
-namespace CodeChallenge\Tests\lib;
+namespace CodeChallenge\Tests;
 
 use CodeChallenge\Reader;
 use PHPUnit\Framework\TestCase;
@@ -11,7 +11,7 @@ class SolutionHelper extends TestCase {
 
     protected function givenReaderForInputFile(string $input_file): Reader {
         $reader = new Reader();
-        $reader->readFile(__DIR__ . '/../input/' . $input_file);
+        $reader->readFile(__DIR__ . '/../../input/' . $input_file);
 
         return $reader;
     }
