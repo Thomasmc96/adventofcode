@@ -1,0 +1,4 @@
+vendor
+.phpunit.result.cache
+.phpstan.result-cache
+.php-cs-fixer.cache

@@ -1,0 +1,17 @@
+name: CI
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: docker build --tag php-code-challenge .
+      - name: "composer install"
+        run: docker run -v "$(pwd)/code:/var/php-code-challenge" -u ${UID}:${UID} --entrypoint bash php-code-challenge -c "composer install --classmap-authoritative --no-progress"
+      - name: "phpstan"
+        run: docker run -v "$(pwd)/code:/var/php-code-challenge" -u ${UID}:${UID} --entrypoint bash php-code-challenge -c "composer phpstan"
+      - name: "phpunit"
+        if: always()
+        run: docker run -v "$(pwd)/code:/var/php-code-challenge" -u ${UID}:${UID} --entrypoint bash php-code-challenge -c "composer phpunit"

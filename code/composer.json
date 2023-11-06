@@ -1,0 +1,41 @@
+{
+    "name": "frederikhs/php-code-challenge",
+    "description": "example project for solving php-code-challenge",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Frederik Hørgreen Sørensen",
+            "email": "frederik@hoergreen.dk"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "CodeChallenge\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CodeChallenge\\Tests\\": "tests/lib"
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3",
+        "phpstan/phpstan": "^1",
+        "phpunit/phpunit": "^10",
+        "symfony/var-dumper": "^6"
+    },
+    "scripts": {
+        "test": [
+            "@phpstan",
+            "@phpunit"
+        ],
+        "phpstan": "phpstan analyse",
+        "phpunit": "phpunit tests",
+        "fix": "php-cs-fixer fix",
+        "fix-dry": "php-cs-fixer fix --dry-run --diff"
+    }
+}

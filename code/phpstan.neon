@@ -1,0 +1,7 @@
+parameters:
+	tmpDir: .phpstan.result-cache
+	level: max
+	paths:
+		- src
+		- tests
+		- run.php
