@@ -24,7 +24,7 @@ final class ReaderTest extends TestCase {
 
         $this->assertIsArray($lines);
         $this->assertEquals(3, sizeof($lines));
-        $this->assertEquals(["Line1", "Line2", "Line3"], $lines);
+        $this->assertEquals(['Line1', 'Line2', 'Line3'], $lines);
     }
 
     public function testCanReadFileAsString(): void {
@@ -39,7 +39,7 @@ final class ReaderTest extends TestCase {
 
     public function testGetAsLinesThrowsExceptionOnEmptyFile(): void {
         $this->expectExceptionMessageMatches('/empty contents/');
-        $this->givenReaderWithInput("")
+        $this->givenReaderWithInput('')
             ->getAsLines();
     }
 

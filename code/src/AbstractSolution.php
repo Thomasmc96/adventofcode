@@ -3,7 +3,7 @@
 namespace CodeChallenge;
 
 abstract class AbstractSolution {
-    abstract static public function solvePartOne(Reader $reader): mixed;
+    abstract public static function solvePartOne(Reader $reader): mixed;
 
-    abstract static public function solvePartTwo(Reader $reader): mixed;
+    abstract public static function solvePartTwo(Reader $reader): mixed;
 }

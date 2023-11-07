@@ -16,7 +16,7 @@ class SolutionHelper extends TestCase {
         return $reader;
     }
 
-    public function givenReaderForFile(string $input_file): Reader {
-        return $this->givenReaderForInputFile($input_file);
+    public function givenReaderForFile(string $day, string $input_file): Reader {
+        return $this->givenReaderForInputFile($day . '/' . $input_file);
     }
 }

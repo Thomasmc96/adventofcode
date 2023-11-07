@@ -4,4 +4,4 @@ parameters:
 	paths:
 		- src
 		- tests
-		- run.php
+		- scripts
