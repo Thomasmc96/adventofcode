@@ -64,13 +64,13 @@ The [**tests**](code/tests) are using a flattened layout since each challenge co
 
 ### Push to your own GitHub repository
 
-After cloning the repository, you can change the origin url using the following command:
+There are two ways to develop, commit and push your own changes going forward. You can fork the repository on GitHub or you can change the origin url using the following command:
 
 ```bash
 git remote set-url origin git@github.com:<USER>/<REPOSITORY>.git
 ```
 
-You will then have changed the origin to point to a GitHub repository you have write-access to. This way you can continue to develop, commit and push your own changes going forward.
+You will then have changed the origin to point to a GitHub repository you have write-access to.
 
 ### CI using GitHub Actions
 
