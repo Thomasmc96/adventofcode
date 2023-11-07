@@ -30,6 +30,7 @@
     },
     "scripts": {
         "test": [
+            "composer dump-autoload --classmap-authoritative",
             "@phpstan",
             "@phpunit"
         ],
