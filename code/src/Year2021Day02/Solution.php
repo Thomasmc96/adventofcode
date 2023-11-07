@@ -38,7 +38,36 @@ class Solution extends AbstractSolution {
         return $x * $y;
     }
 
-    public static function solvePartTwo(Reader $reader): mixed {
-        throw new Exception('not implemented yet');
+    public static function solvePartTwo(Reader $reader): int {
+        $lines = $reader->getAsLines();
+
+        $x = 0;
+        $y = 0;
+        $aim = 0;
+        foreach ($lines as $line) {
+            $parts = explode(' ', $line);
+            $direction = $parts[0];
+            $amount = intval($parts[1]);
+
+            switch ($direction) {
+                case 'forward':
+                    $x += $amount;
+                    $y += $aim * $amount;
+
+                    break;
+                case 'up':
+                    $aim -= $amount;
+
+                    break;
+                case 'down':
+                    $aim += $amount;
+
+                    break;
+                default:
+                    throw new Exception('unhandled direction: ' . $direction);
+            }
+        }
+
+        return $x * $y;
     }
 }
