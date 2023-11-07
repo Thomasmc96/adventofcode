@@ -62,6 +62,16 @@ Inside [**src**](code/src) each challenge has its own namespace allowing you to 
 
 The [**tests**](code/tests) are using a flattened layout since each challenge consists of only two files. A [**SolutionHelper**](code/tests/lib/SolutionHelper.php) class can be extended to facilitate easier reading of input files. 
 
+### Push to your own GitHub repository
+
+After cloning the repository, you can change the origin url using the following command:
+
+```bash
+git remote set-url origin git@github.com:<USER>/<REPOSITORY>.git
+```
+
+You will then have changed the origin to point to a GitHub repository you have write-access to. This way you can continue to develop, commit and push your own changes going forward.
+
 ### CI using GitHub Actions
 
 This repository contains a [**ci.yml**](.github/workflows/ci.yml) file with a workflow that runs PHPStan and PHPUnit whenever your push. This ensures that even if you did not run the tests before pushing, GitHub Actions will.
