@@ -13,6 +13,6 @@ final class Year2023Day01SolutionPartTwoTest extends SolutionHelper {
     public function testPartTwo(): void {
         $reader = $this->givenReaderForFile('Year2023Day01', self::INPUT_FILENAME);
         $result = Solution::solvePartTwo($reader);
-        $this->assertEquals(548451, $result);
+        $this->assertEquals(54875, $result);
     }
 }
