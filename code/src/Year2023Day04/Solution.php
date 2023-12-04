@@ -17,7 +17,6 @@ class Solution extends AbstractSolution {
             }
 
             $card_exp = explode(': ', $card);
-            $card_id= $card_exp[0];
             $card_numbers = $card_exp[1];
             $card_numbers_exp = explode(' | ', $card_numbers);
             $winning_numbers = $card_numbers_exp[0];
@@ -70,9 +69,6 @@ class Solution extends AbstractSolution {
             $filteredNumbers = array_filter($card_id_string_split);
             $card_id = intval(reset($filteredNumbers));
 
-            // if($card_id === 4) {
-            //     exit();
-            // }
             $card_numbers = $card_exp[1];
             dump($card_id);
             $card_numbers_exp = explode(' | ', $card_numbers);
@@ -84,7 +80,6 @@ class Solution extends AbstractSolution {
 
             $matching_numbers = 0;
 
-            $this_extra_card = [];
             foreach ($my_numbers_array as $my_number) {
                 if (in_array($my_number, $winning_numbers_array) && !empty($my_number)) {
 
@@ -114,14 +109,7 @@ class Solution extends AbstractSolution {
                     }
                 }
             }
-            // dump($card_id);
-            // dump($extra_cards);
         }
-        //
-        // sort($extra_cards);
-        // dump($extra_cards);
-        // dump(count($extra_cards));
-        // dump(count($lines));
 
         return count($extra_cards) + count($lines) - 1;
     }
