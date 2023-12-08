@@ -70,7 +70,6 @@ class Solution extends AbstractSolution {
             $card_id = intval(reset($filteredNumbers));
 
             $card_numbers = $card_exp[1];
-            dump($card_id);
             $card_numbers_exp = explode(' | ', $card_numbers);
             $winning_numbers = $card_numbers_exp[0];
             $my_numbers = $card_numbers_exp[1];
